@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+nav {
+    font-family: "Candara";
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1111;
+}
+
+
+
+
+
+/* MOBILE NAVIGATION */
+
+#hamburger {
+    display: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#hamburger img {
+    width: 30px;
+}
+
+#mobileNav {
+    font-family: "Candara";
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1111;
+    height: 0px;
+    transition: all .5s;
+}
+
+#mobileNav ul {
+    position: relative;
+    list-style: none;
+    background: rgb(255, 246, 246);
+    text-align: center;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.05) 3px 3px 4px;
+    overflow: hidden;
+}
+
+#mobileNav ul:before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    right: 0;
+    background: rgb(255, 246, 246);
+    top: -10px;
+    transform: skewY(-50deg);
+}
+
+#mobileNav ul li {
+    margin: 30px;
+}
+
+#mobileNav ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: rgb(112, 112, 112);
+}
+
+#mobileNav ul .contact a {
+    color: rgb(39, 39, 39);
+    background: rgb(255, 213, 25);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+
+
+
+
+/* NAVIGATION */
+
+
+#navigation {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1111;
+}
+
+#navigation .logo {
+    font-size: 24px;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.1) 3px 3px 4px;
+}
+
+#navigation #navBtn {
+    background: transparent;
+}
+
+#navigation #navBtn ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#navigation #navBtn ul li {
+    margin: 10px;
+}
+
+#navigation #navBtn ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all .5s;
+
+}
+
+#navigation #navBtn ul .contact a {
+    color: black;
+    background: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+#navigation #navBtn ul li:hover a ,
+#navigation #navBtn ul li:active a {
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+
+
+/* FRONT PAGE */
+
+#frontPage {
+    width: 100%;
+    height: 100vh;
+    background: url(image-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.frontPageText {
+    position: relative;
+    top: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#frontPage h1 {
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 10px;
+    word-spacing: 10px;
+    margin-bottom: 60px;
+}
+
+#frontPage img {
+    padding: 10px;
+}
+
+
+
+
+
+
+/* SECTION ONE */
+
+section {
+    width: auto;
+    font-family: "Tahoma";
+}
+
+#sectionTextContainer {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sectionOne {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height: 100%;
+    background: rgb(255, 246, 246);
+}
+
+.sectionOneImage {
+    height: 500px;
+    background: url(image-transform.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.sectionText {
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.sectionText h1 {
+    font-size: 45px;
+    font-family: cooper;
+}
+
+.sectionText p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0px;
+}
+
+.sectionText a {
+    text-decoration: none;
+    color: black;
+}
+
+.sectionText h3{
+    position: relative;
+    display: inline-block;
+    padding: 1px 5px;
+    z-index: 100;
+}
+
+
+.sectionText h3:before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 50px;
+    height: 10px;
+    width: 100%;
+    background: rgb(255, 213, 213);
+    display: none;
+    z-index: -1;
+}
+
+.sectionText h3:hover:before,
+.sectionText h3:active:before {
+    display: block;
+}
+
+#sectionOne .sectionText h3:before {
+    background: rgb(255, 217, 0);
+}
+
+#sectionTwo .sectionText h3:before {
+    background: salmon;
+}
+
+
+
+
+
+/* SECTION TWO */
+
+#sectionTwo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-height: 100;
+    background: rgb(255, 246, 246);
+}
+
+.sectionTwoImage {
+    height: 500px;
+    background: url(image-stand-out.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+/* SECTION THREE */
+
+
+#sectionThree {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height: 100%;
+}
+
+#sectionThree a {
+    text-decoration: none;
+}
+
+.sectionText h4 {
+    font-size: 30px;
+    font-family: Cooper;
+}
+
+#sectionThree1 {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background: url(image-graphic-design.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#sectionThree2 {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background: url(image-photography.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+
+
+/* CLIENT TESTIMONIAL */
+
+
+#testimonial {
+    width: 100%;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 246, 246);
+}
+
+#testimonialWidth {
+    width: 80%;
+}
+
+#testimonial .header {
+    margin: 50px 0px;
+}
+
+#testimonial .header h4{
+    font-size: 25px;
+    font-family: Cooper;
+    letter-spacing: 3px;
+    text-align: center;
+    color: rgb(141, 141, 141);
+}
+
+#testimonial #testimonialCardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#testimonial #testimonialCard {
+    text-align: center;
+    margin: 30px 10px;
+    color: rgb(65, 65, 65);
+}
+
+#testimonial #testimonialCard .profileImg img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+}
+
+#testimonial #testimonialCard p {
+    line-height: 1.5;
+    margin: 30px 0px;
+    font-family: Tahoma;
+}
+
+#testimonial #testimonialCard .testimonialName h5 {
+    font-size: 20px;
+    font-family: Cooper;
+}
+
+#testimonial #testimonialCard .testimonialName p {
+    margin: 10px;
+    font-family: Tahoma;
+    color: rgb(180, 180, 180);
+}
+
+
+
+
+/* PICTURE SECTION */
+
+#pictures {
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#pictures .milk {
+    background: url(image-gallery-milkbottles.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#pictures .orange {
+    background: url(image-gallery-orange.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#pictures .cone {
+    background: url(image-gallery-cone.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#pictures .sugar {
+    background: url(image-gallery-sugarcubes.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 300px;
+    background: hsl(168, 38%, 72%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footerHeader {
+    text-align: center;
+}
+
+footer .footerHeader h2 {
+    font-family: "Candara";
+    font-size: 30px;
+    color: rgb(44, 117, 102);
+}
+
+
+footer .footerNavigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+footer .footerNavigation ul li {
+    margin: 15px;
+}
+
+footer .footerNavigation ul li a {
+    font-family: "Candara";
+    text-decoration: none;
+    color: rgb(44, 117, 102);
+    padding: 10px;
+    transition: all .5s ease;
+}
+
+footer .footerNavigation ul li a:hover,
+footer .footerNavigation ul li a:active {
+    color: white;
+}
+
+
+footer .footerSocialIcon ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+footer .footerSocialIcon ul li {
+    transition: all 1s;
+}
+
+footer .footerSocialIcon ul li:hover {
+    transform: scale(1.2);
+    transform:rotate(-1080deg);
+}
+
+footer .footerSocialIcon ul li a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    transition: all .5s;
+}
+
+footer .footerSocialIcon ul li:hover a,
+footer .footerSocialIcon ul li:active a {
+    background: rgba(255, 255, 255, 0.294);
+    border-radius: 20px 0px 30px 0px;
+    box-shadow: rgba(0, 0, 0, 0.102) 3px 6px 10px;
+}
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media all and (max-width: 730px){
+
+    #navBtn {
+        display: none;
+    }
+    
+    #hamburger {
+        display: block;
+    }
+}
+
+@media all and (max-width: 599px) {
+    .sectionText {
+        text-align: center;
+        width: 80%;
+    }
+
+    #sectionOne {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .sectionOneImage, .sectionTwoImage {
+      height: 350px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    #frontPage h1 {
+        font-size: 12vw;
+    }
+
+    #testimonial .header h4 {
+        font-size: 5vw;
+    }
+}
+
+@media all and (max-width: 399px) {
+    #pictures {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
